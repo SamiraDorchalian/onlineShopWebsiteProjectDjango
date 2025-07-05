@@ -5,6 +5,7 @@
 {% block page_title %}Login{% endblock page_title %}
 
 {% block content %}
+    <h1>Log In</h1>
     <form action='' method='POST'>
         {% csrf_token %}
         {{ form|crispy }}
