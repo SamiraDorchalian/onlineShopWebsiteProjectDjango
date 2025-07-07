@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <html lang="en" dir='rtl'>
   <head>
     <!-- Required meta tags -->
@@ -43,22 +44,22 @@
                                     <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                         <li class="mainmenu__item menu-item-has-children active">
                                             <a href="{% url "product_list" %}" class="mainmenu__link">
-                                                <span class="mm-text">خانه</span>
+                                                <span class="mm-text">{{home}}</span>
                                             </a>
                                         </li>
                                         <li class="mainmenu__item menu-item-has-children">
                                             <a href="Blog.html" class="mainmenu__link">
-                                                <span class="mm-text">وبلاگ</span>
+                                                <span class="mm-text">{{blog}}</span>
                                             </a>
                                         </li>
                                         <li class="mainmenu__item menu-item-has-children">
                                             <a href="#" class="mainmenu__link">
-                                                <span class="mm-text">صفحات</span>
+                                                <span class="mm-text">{{pages}}</span>
                                             </a>
                                          </li>
                                         <li class="mainmenu__item">
                                             <a href="contact-us.html" class="mainmenu__link">
-                                                <span class="mm-text">تماس با ما</span>
+                                                <span class="mm-text">{{contactUs}}</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -84,16 +85,16 @@
                                     </a>
                                     <ul class="user-info-menu">
                                         <li>
-                                            <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                            <a class="text-right" href="my-account.html">{{userAccount}}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="cart.html">سبد خرید</a>
+                                            <a class="text-right" href="cart.html">{{shoppingCart}}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
+                                            <a class="text-right" href="wishlist.html">{{favorites}}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
+                                            <a class="text-right" href="order-tracking.html">{{orderHistory}}</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -115,6 +116,14 @@
         </header>
         <!-- Header End -->
 
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
 
     <div class='container'>
       {% block content %}{% endblock content %}
@@ -133,13 +142,13 @@
                             </div>
                             <div class="footer-widget mb--50 pb--1">
                                 <ul class="footer-menu">
-                                    <li><a href="">درباره ما</a></li>
-                                    <li><a href="">قوانین و مقررات</a></li>
-                                    <li><a href="">تماس با ما</a></li>
+                                    <li><a href="">{{aboutUs}}</a></li>
+                                    <li><a href="">{{rulesAndRegulations}}</a></li>
+                                    <li><a href="">{{contactUs}}</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                Codingyar.com © | all rights reserved
+                                {{developedBy}} ♥
                             </div>
                         </div>
                     </div>

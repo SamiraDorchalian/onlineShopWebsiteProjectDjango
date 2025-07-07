@@ -1,8 +1,9 @@
 {% extends "_base.html" %}
+{% load i18n %}
 
-{% block page_title %}Home Page{% endblock page_title %}
+{% block page_title %}{{homePage}}{% endblock page_title %}
 
 {% block content %}
-    <h1>Home Page</h1>
+    <h1>{{homePage}}</h1>
 {% endblock content %}
 

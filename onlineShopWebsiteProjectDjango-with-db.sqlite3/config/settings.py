@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from environs import Env
 import os
+from django.contrib.messages import constants as messages_constants
 
 # for environment variables
 env = Env()
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
     # third party
     # Crispy
+    'rosetta',
     "crispy_forms",
     "crispy_bootstrap4",
     # AllAuth
@@ -87,6 +89,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
+                'products.context_processors.add_variable_to_context',
             ],
         },
     },
@@ -161,12 +164,19 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa'
 
-TIME_ZONE = 'UTC'
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
+
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
-
+USE_I10N = True
 USE_TZ = True
 
 
@@ -198,3 +208,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 # crispy forms settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+MESSAGE_TAGS = {
+    messages_constants.ERROR: 'danger',
+}

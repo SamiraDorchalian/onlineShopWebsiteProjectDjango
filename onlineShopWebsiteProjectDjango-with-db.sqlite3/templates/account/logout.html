@@ -1,12 +1,13 @@
 {% extends "_base.html" %}
+{% load i18n %}
 
-{% block page_title %}Log Out{% endblock page_title %}
+{% block page_title %}{{logout}}{% endblock page_title %}
 
 {% block content %}
-    <h1>Log Out</h1>
-    <h2>Are you sure you want to logout?</h2>
+    <h1>{{logout}}</h1>
+    <h2>{{areYouSureYouWantToLogout}}?</h2>
     <form action='' method='POST'>
         {% csrf_token %}
-        <input class='btn btn-success mt-3' type='submit' value='Are You Sure?' />
+        <input class='btn btn-success mt-3' type='submit' value='{{areYouSure}}?' />
     </form>
 {% endblock content %}
