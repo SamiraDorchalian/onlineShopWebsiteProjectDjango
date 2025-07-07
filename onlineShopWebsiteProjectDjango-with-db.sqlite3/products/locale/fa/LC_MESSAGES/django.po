@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-07 16:52+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\context_processors.py:5
+msgid "HomePage"
+msgstr "صفحه خانه"
+
+#: .\context_processors.py:6
+msgid "Welcome"
+msgstr "خوش آمدی"
+
+#: .\context_processors.py:7
+msgid "Log Out"
+msgstr "خروج"
+
+#: .\context_processors.py:8
+msgid "Log In"
+msgstr "ورود"
+
+#: .\context_processors.py:9
+msgid "Sign Up"
+msgstr "ثبت نام"
+
+#: .\context_processors.py:10
+msgid "Books"
+msgstr ""
+
+#: .\context_processors.py:11
+msgid "Home"
+msgstr "خانه"
+
+#: .\context_processors.py:12
+msgid "Add New Book"
+msgstr ""
+
+#: .\context_processors.py:13
+msgid "Or"
+msgstr ""
+
+#: .\context_processors.py:14
+msgid "Link"
+msgstr ""
+
+#: .\context_processors.py:15
+msgid "GitHub"
+msgstr "گیت هاب"
+
+#: .\context_processors.py:16
+msgid "Linkedin"
+msgstr "لینکدین"
+
+#: .\context_processors.py:17
+msgid "Fotgot Your Password"
+msgstr "فراموشی رمز عبور"
+
+#: .\context_processors.py:18
+msgid "Book Dream"
+msgstr ""
+
+#: .\context_processors.py:19
+msgid "Book"
+msgstr ""
+
+#: .\context_processors.py:20
+msgid "Send"
+msgstr "ارسال"
+
+#: .\context_processors.py:21
+msgid "Password Reset Form"
+msgstr "فرم بازیابی رمز عبور"
+
+#: .\context_processors.py:22
+msgid "Password Reset Done"
+msgstr "بازیابی رمز عبور انجام شد"
+
+#: .\context_processors.py:23
+msgid "Email Sent!"
+msgstr "ایمیل ارسال شد"
+
+#: .\context_processors.py:24
+msgid "Please check your email. We have sent you the instructions."
+msgstr "لطفا ایمیل خود را بررسی کنید. ما دستورالعمل لازم را برای شما ارسال کردیم"
+
+#: .\context_processors.py:25
+msgid "Set New Password"
+msgstr "تنظیم رمزعبور جدید"
+
+#: .\context_processors.py:26
+msgid "Set New Password Form Reset"
+msgstr "تنظیم بازیابی رمز عبور جدید"
+
+#: .\context_processors.py:27
+msgid "Successful"
+msgstr "موفقست"
+
+#: .\context_processors.py:28
+msgid "Password reset complete!"
+msgstr "بازیابی رمز عبور کامل شد"
+
+#: .\context_processors.py:29
+msgid "You can login on"
+msgstr ""
+
+#: .\context_processors.py:30
+msgid "Login Page"
+msgstr "صفحه ورود"
+
+#: .\context_processors.py:31
+msgid "Password Change"
+msgstr "تغییر رمزعبور"
+
+#: .\context_processors.py:32
+msgid "Change"
+msgstr "تغییر"
+
+#: .\context_processors.py:33
+msgid "Your password was change."
+msgstr "رمز عبور شما تغییر یافت"
+
+#: .\context_processors.py:34
+msgid "Blog"
+msgstr "بلاگ"
+
+#: .\context_processors.py:35
+msgid "Pages"
+msgstr "صفحات"
+
+#: .\context_processors.py:36
+msgid "Contact Us"
+msgstr "ارتباط با ما"
+
+#: .\context_processors.py:37
+msgid "Shopping cart"
+msgstr "سبد خرید"
+
+#: .\context_processors.py:38
+msgid "Favorites"
+msgstr "علاقه مندی ها"
+
+#: .\context_processors.py:39
+msgid "Order history"
+msgstr "تاریخچه سفارشات"
+
+#: .\context_processors.py:40
+msgid "About Us"
+msgstr "درباره ما"
+
+#: .\context_processors.py:41
+msgid "Rules and regulations"
+msgstr "قوانین و مقررات"
+
+#: .\context_processors.py:42
+msgid "Developed By"
+msgstr "توسعه داده شده با"
+
+#: .\context_processors.py:43
+msgid "Are you sure you want to logout"
+msgstr "آیا شما مطمئن هستید برای خروج از حساب کاربری؟"
+
+#: .\context_processors.py:44
+msgid "Are You Sure"
+msgstr "آیا شما مطمئن هستید؟"
+
+#: .\models.py:7
+msgid "Title"
+msgstr "موضوع"
+
+#: .\models.py:8
+msgid "Description"
+msgstr "توضیحات"
+
+#: .\models.py:9
+msgid "Price"
+msgstr "قیمت"
+
+#: .\models.py:37
+msgid "Comment author"
+msgstr "نظر نویسنده"
+
+#: .\models.py:38
+msgid "Text Comment"
+msgstr "متن نظر"
+
+#: .\models.py:39
+msgid "What is your score?"
+msgstr "امتیاز شما"
+
+#: .\templates\products\product_detail.html:8
+msgid "Product Detail"
+msgstr "جزئیات محصول"
+
+#: .\templates\products\product_detail.html:18
+#: .\templates\products\product_detail.html:69
+msgid "Product Description"
+msgstr "توضیحات محصول"
+
+#: .\templates\products\product_detail.html:39
+#: .\templates\products\product_detail.html:41
+#: .\templates\products\product_list.html:53
+#: .\templates\products\product_list.html:56
+msgid "Dollar"
+msgstr "$"
+
+#: .\templates\products\product_detail.html:50
+#: .\templates\products\product_list.html:59
+msgid "Add to cart"
+msgstr "اضافه به سبد خرید"
+
+#: .\templates\products\product_detail.html:54
+msgid "Categories :"
+msgstr "دسته بندی ها"
+
+#: .\templates\products\product_detail.html:55
+msgid "Clothes"
+msgstr "لباس"
+
+#: .\templates\products\product_detail.html:56
+msgid "Summer"
+msgstr "تابستانی"
+
+#: .\templates\products\product_detail.html:57
+#: .\templates\products\product_detail.html:90
+msgid "Kilogram"
+msgstr "گرم"
+
+#: .\templates\products\product_detail.html:58
+msgid "Female"
+msgstr "زنانه"
+
+#: .\templates\products\product_detail.html:72
+msgid "Features"
+msgstr "ویژگی‌ها"
+
+#: .\templates\products\product_detail.html:75
+msgid "Comments"
+msgstr "نظرات"
+
+#: .\templates\products\product_detail.html:89
+msgid "Weight"
+msgstr "وزن"
+
+#: .\templates\products\product_detail.html:93
+msgid "Size"
+msgstr "اندازه"
+
+#: .\templates\products\product_detail.html:97
+msgid "Color"
+msgstr "رنگ"
+
+#: .\templates\products\product_detail.html:99
+msgid "Black"
+msgstr "سیاه"
+
+#: .\templates\products\product_detail.html:100
+msgid "Green"
+msgstr "سبز"
+
+#: .\templates\products\product_detail.html:101
+msgid "Red"
+msgstr "قرمز"
+
+#: .\templates\products\product_detail.html:102
+msgid "Orange"
+msgstr "نارنجی"
+
+#: .\templates\products\product_detail.html:111
+msgid "Comment For"
+msgstr "نظر برای"
+
+#: .\templates\products\product_detail.html:127
+msgid "Rated"
+msgstr "رتبه"
+
+#: .\templates\products\product_detail.html:127
+msgid "out of"
+msgstr "خارج از"
+
+#: .\templates\products\product_detail.html:142
+msgid "Enter Your Comment"
+msgstr "نظر خود را وارد کنید"
+
+#: .\templates\products\product_list.html:4
+msgid "Product List"
+msgstr "لیست محصولات"
+
+#: .\templates\products\product_list.html:17
+msgid "Show"
+msgstr "نمایش"
+
+#: .\templates\products\product_list.html:17
+msgid "Form"
+msgstr "فرم"
+
+#: .\templates\products\product_list.html:46
+msgid "Special discount"
+msgstr "تخفیف ویژه"
