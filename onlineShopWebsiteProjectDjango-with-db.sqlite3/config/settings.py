@@ -44,14 +44,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third party
+    # Crispy
     "crispy_forms",
     "crispy_bootstrap4",
+    # AllAuth
     'allauth',
     'allauth.account',
+    # Optional -- requires install using `django-allauth[socialaccount]`.
+    'allauth.socialaccount',
 
     # locale
-    'accounts',
-    'pages',
+    'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
+    'products.apps.ProductsConfig',
 ]
 
 MIDDLEWARE = [
@@ -89,13 +94,34 @@ TEMPLATES = [
 SITE_ID = 1
 
 AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by email
+    # Django AllAuth
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "samiradorchalain1998@gmail.com"
+EMAIL_HOST_PASSWORD = "1998samira"
+
+print(f"SECRET_KEY: {SECRET_KEY}")
+
+
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '123',
+            'secret': '456',
+            'key': ''
+        }
+    }
+}
 
 
 WSGI_APPLICATION = 'config.wsgi.application'
@@ -159,7 +185,7 @@ AUTH_USER_MODEL = 'accounts.CustomeUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-# all auth settings 
+# all auth settings
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_USERNAME_REQUIRED = False
