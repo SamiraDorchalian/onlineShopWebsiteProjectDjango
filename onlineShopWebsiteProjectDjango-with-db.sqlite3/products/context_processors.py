@@ -42,4 +42,5 @@ def add_variable_to_context(request):
         'developedBy':_('Developed By'),
         'areYouSureYouWantToLogout':_('Are you sure you want to logout'),
         'areYouSure':_('Are You Sure'),
+        'profile':_('Profile'),
     }
