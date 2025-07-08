@@ -90,7 +90,9 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
+                # Custome Context Processors
                 'products.context_processors.add_variable_to_context',
+                'cart.context_processors.cart',
             ],
         },
     },

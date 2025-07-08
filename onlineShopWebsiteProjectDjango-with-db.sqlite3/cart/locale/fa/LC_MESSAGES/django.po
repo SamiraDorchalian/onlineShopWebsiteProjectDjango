@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-08 15:05+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\cart.py:36
+msgid "Product successfully added to cart"
+msgstr "محصول با موفقیت وارد سبد خرید شد"
+
+#: .\cart.py:48
+msgid "Product successfully removed from cart"
+msgstr "محصول با موفقیت از سبد خرید حذف شد"
+
+#: .\templates\cart\cart_detail.html:15
+msgid "Cart"
+msgstr "سبد خرید"
+
+#: .\templates\cart\cart_detail.html:37
+msgid "Cover Image"
+msgstr "عکس محصول"
+
+#: .\templates\cart\cart_detail.html:38
+msgid "Product name"
+msgstr "نام محصول"
+
+#: .\templates\cart\cart_detail.html:39
+msgid "Price"
+msgstr "قیمت"
+
+#: .\templates\cart\cart_detail.html:40
+msgid "Amount"
+msgstr "مقدار/تعداد"
+
+#: .\templates\cart\cart_detail.html:41 .\templates\cart\cart_detail.html:106
+msgid "Total"
+msgstr "مجموع"
+
+#: .\templates\cart\cart_detail.html:62 .\templates\cart\cart_detail.html:83
+#: .\templates\cart\cart_detail.html:123
+msgid "Dollar"
+msgstr "$"
+
+#: .\templates\cart\cart_detail.html:92
+msgid "Cart is Empty! Please add some products to the cart"
+msgstr "سبد خرید خالی است. لطفا چند تعداد محصول به سبد خرید اضافه کنید"
+
+#: .\templates\cart\cart_detail.html:93
+msgid "Go shopping"
+msgstr "رفتن به لیست محصولات"
+
+#: .\templates\cart\cart_detail.html:99
+msgid "Empty shopping cart"
+msgstr "سبد خرید خالی است"
+
+#: .\templates\cart\cart_detail.html:119
+msgid "Sum Total"
+msgstr "جمع کل"
+
+#: .\templates\cart\cart_detail.html:130
+msgid "Place an order"
+msgstr "ثبت سفارش"
