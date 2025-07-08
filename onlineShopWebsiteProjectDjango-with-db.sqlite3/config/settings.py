@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third party
+    # Django Jalali Date   
+    'jalali_date',
     # Crispy
     'rosetta',
     "crispy_forms",
@@ -61,6 +63,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
+    'persian_translate.apps.PersianTranslateConfig',
 ]
 
 MIDDLEWARE = [
