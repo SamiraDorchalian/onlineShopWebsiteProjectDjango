@@ -62,7 +62,17 @@
                                                             <span class="money text-danger">{{product.price|intcomma:False|translate_number}} {% trans "Dollar" %}</span>
                                                         </span>
                                                     </div>
-                                                    <a href="cart.html" class="btn btn-small btn-bg-sand btn-color-dark px-3">{% trans "Add to cart" %}</a>
+                                                    <form action='{% url "cart:cart_add" product.id %}' method='POST'>
+                                                        {% csrf_token %}
+                                                        {% comment %} {{ add_to_cart_form|crispy }} {% endcomment %}
+                                                        <div class="quantity-wrapper">
+                                                            <input type="hidden" class="quantity-input" name="quantity" id="qty" value="1" min="1" max='30'>
+                                                            <button class="btn btn-small btn-bg-red btn-color-white btn-hover-2" type='submit'>
+                                                                {% trans "Add to cart" %}
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                    {% comment %} <a href="cart.html" class="btn btn-small btn-bg-sand btn-color-dark px-3">{% trans "Add to cart" %}</a> {% endcomment %}
                                                 </div>
                                             </div>
                                         </div>

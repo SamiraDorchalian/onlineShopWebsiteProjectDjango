@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-09 14:16+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\models.py:8
+msgid "User"
+msgstr ""
+
+#: .\models.py:9
+msgid "IS Paid?"
+msgstr "پرداخت شده؟"
+
+#: .\models.py:11
+msgid "First Name"
+msgstr "نام"
+
+#: .\models.py:12
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: .\models.py:13
+msgid "Phone Number"
+msgstr "شماره تلفن"
+
+#: .\models.py:14
+msgid "Address"
+msgstr "آدرس"
+
+#: .\models.py:16
+msgid "Order Notes"
+msgstr "یادداشت سفارش"
+
+#: .\models.py:26 .\templates\orders\order_create.html:15
+msgid "Order"
+msgstr "سفارش"
+
+#: .\models.py:27
+msgid "Product"
+msgstr "محصول"
+
+#: .\models.py:28
+msgid "Quantity"
+msgstr "تعداد/مقدار"
+
+#: .\models.py:29
+msgid "Price"
+msgstr "قیمت"
+
+#: .\templates\orders\order_create.html:8
+msgid "Order Created"
+msgstr "سفارش ساخته شد"
+
+#: .\templates\orders\order_create.html:27
+msgid "Order Description"
+msgstr "جزئیات سفارش"
+
+#: .\templates\orders\order_create.html:33
+msgid "Create"
+msgstr "ایجاد"
+
+#: .\templates\orders\order_create.html:57
+#: .\templates\orders\order_create.html:64
+msgid "Dollar"
+msgstr "$"
+
+#: .\templates\orders\order_create.html:63
+msgid "Total"
+msgstr "جمع کل"
