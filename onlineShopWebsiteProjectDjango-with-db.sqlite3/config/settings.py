@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'persian_translate.apps.PersianTranslateConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -226,3 +227,5 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 MESSAGE_TAGS = {
     messages_constants.ERROR: 'danger',
 }
+
+ZARINPAL_MERCHANT_ID = env('DJANGO_ZARINPAL_MERCHANT_ID')
