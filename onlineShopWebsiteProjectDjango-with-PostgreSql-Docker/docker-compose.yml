@@ -1,4 +1,4 @@
-version: '28.0'
+version: "28.0"
 
 services:
   web:
@@ -8,6 +8,11 @@ services:
       - .:/code
     ports:
       - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-_^sf*f16a==q9_m5&yt125#_c^pz!a4p6w2xl!=+b@ko9*sx5z"
+      - "DJANGO_DEBUG=True"
 
   db:
     image: postgres:17
