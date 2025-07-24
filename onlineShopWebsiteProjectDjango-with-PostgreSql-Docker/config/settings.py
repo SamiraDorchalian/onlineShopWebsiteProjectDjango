@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django.contrib.humanize',
+
     # Third party Apps
     'jalali_date',
     'rosetta',
@@ -57,10 +59,11 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount', # Optional -- requires install using `django-allauth[socialaccount]`.
     # Local Apps
-    'accounts',
-    'pages',
-    'products',
-    'cart',
+    'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
+    'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
+    'persian_translate.apps.PersianTranslateConfig',
 ]
 
 LOCALE_PATHS = (
@@ -110,6 +113,7 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by email
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
