@@ -147,7 +147,11 @@
                                                         <div class="review__container">
                                                             <div class="review__text">
                                                                 <div class="d-flex flex-sm-row flex-row">
-                                                                    <img src="{% static "img/others/comment-1.jpg" %}" alt="Review Avatar" class="review__avatar p-3">
+                                                                    {% if product.image %}
+                                                                        <img class="review__avatar p-3 " style="max-height: 400px;" src="{{ comment.image.url }}" alt="productImage">
+                                                                    {% else %}
+                                                                        <img src="{% static "img/others/comment-1.jpg" %}" alt="Review Avatar" style="max-height: 400px;" class="review__avatar p-3">
+                                                                    {% endif %}
                                                                     <div>
                                                                         <div class="review__meta" dir='ltr'>
                                                                             <span class="review__published-date">{{ comment.datetime_created }}</span>
