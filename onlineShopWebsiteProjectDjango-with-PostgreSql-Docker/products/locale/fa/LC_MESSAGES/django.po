@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-24 18:18+0330\n"
-"PO-Revision-Date: 2025-07-24 17:37+0330\n"
+"PO-Revision-Date: 2025-07-24 22:28+0330\n"
 "Last-Translator:   <samiradorchalian1998@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -103,11 +103,11 @@ msgstr "ارسال"
 
 #: .\products\templates\products\product_detail.html:182
 msgid "To write your comment please"
-msgstr ""
+msgstr "نظر خود را بنویسید لطفا"
 
 #: .\products\templates\products\product_detail.html:183
 msgid "Login"
-msgstr ""
+msgstr "ورود"
 
 #: .\products\templates\products\product_list.html:175
 msgid "Quantity"

@@ -55,9 +55,10 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap4",
     'ckeditor', # RichTextField
-    'allauth', # Allauth
+    'allauth',
     'allauth.account',
     'allauth.socialaccount', # Optional -- requires install using `django-allauth[socialaccount]`.
+    
     # Local Apps
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
@@ -187,6 +188,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Media
 MEDIA_URL = '/media/'
