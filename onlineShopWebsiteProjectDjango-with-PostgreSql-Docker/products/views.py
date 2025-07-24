@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
-from .forms import CommentForm
+from django.contrib import messages
+from django.utils.translation import gettext as _
 
+from .forms import CommentForm
 from .models import Product, Comment
 
 class ProductListView(generic.ListView):

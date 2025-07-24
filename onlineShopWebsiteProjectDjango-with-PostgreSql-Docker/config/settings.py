@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from environs import Env
 import os
+from django.contrib.messages import constants as messages_constants
 
 # for environment variables
 env = Env()
@@ -48,7 +49,7 @@ INSTALLED_APPS = [
 
     # Third party Apps
     'jalali_date',
-    # 'rosetta',
+    'rosetta',
     "crispy_forms",
     "crispy_bootstrap4",
     'ckeditor', # RichTextField
@@ -59,7 +60,12 @@ INSTALLED_APPS = [
     'accounts',
     'pages',
     'products',
+    'cart',
 ]
+
+LOCALE_PATHS = (
+    'templates/locale',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -196,3 +202,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+MESSAGE_TAGS = {
+    messages_constants.ERROR: 'danger' , 
+}

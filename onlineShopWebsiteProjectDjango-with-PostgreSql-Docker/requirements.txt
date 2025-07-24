@@ -6,7 +6,7 @@ crispy-bootstrap4==2025.6
 crispy-bootstrap5==2025.6
 dj-database-url==3.0.1
 dj-email-url==1.0.6
-django==4.2.23
+Django==4.2.23
 django-allauth==65.10.0
 django-cache-url==3.4.5
 django-ckeditor==6.7.3
@@ -16,7 +16,7 @@ django-js-asset==2.2.0
 django-rosetta==0.10.2
 environs==14.2.0
 idna==3.10
-jalali-core==1.0.0
+jalali_core==1.0.0
 jdatetime==5.2.0
 marshmallow==4.0.0
 pillow==11.2.1
@@ -25,6 +25,6 @@ psycopg2-binary==2.9.3
 python-dotenv==1.1.1
 requests==2.32.4
 sqlparse==0.5.3
-typing-extensions==4.14.1
+typing_extensions==4.14.1
 tzdata==2025.2
 urllib3==2.5.0
