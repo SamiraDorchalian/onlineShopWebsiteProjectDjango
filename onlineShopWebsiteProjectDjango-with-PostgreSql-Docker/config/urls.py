@@ -20,11 +20,12 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
+    path('products/', include('products.urls')),
+    path('cart/', include('cart.urls')),
+    
     # path('accounts/', include('django.contrib.auth.urls')),
     # path('accounts/', include('accounts.urls')),
     path('accounts/', include('allauth.urls')), # Allauth
-    path('products/', include('products.urls')),
 
-    # Rosetta
-    path('rosetta/', include('rosetta.urls')),
+    path('rosetta/', include('rosetta.urls')), # Rosetta
 ]
