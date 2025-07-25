@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-25 15:40+0330\n"
-"PO-Revision-Date: 2025-07-25 15:40+0330\n"
+"POT-Creation-Date: 2025-07-25 16:22+0330\n"
+"PO-Revision-Date: 2025-07-25 16:24+0330\n"
 "Last-Translator:   <samiradorchalian1998@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,69 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.2\n"
 
-#: .\templates\orders\order_create.html:41
+#: .\models.py:8
+msgid "User"
+msgstr "کاربر"
+
+#: .\models.py:11
+msgid "First Name"
+msgstr "نام"
+
+#: .\models.py:12
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: .\models.py:13
+msgid "Phone Number"
+msgstr "شماره تلفن"
+
+#: .\models.py:14
+msgid "Address"
+msgstr "آدرس"
+
+#: .\models.py:16
+#| msgid "Order"
+msgid "Order Notes"
+msgstr "یادداشت سفارش"
+
+#: .\models.py:26 .\templates\orders\order_create.html:41
 msgid "Order"
 msgstr "سفارش"
+
+#: .\models.py:27 .\templates\orders\order_create.html:110
+msgid "Product"
+msgstr "محصول"
+
+#: .\models.py:28
+msgid "Quantity"
+msgstr "تعداد/مقدار"
+
+#: .\models.py:29
+msgid "price"
+msgstr "قیمت"
+
+#: .\templates\orders\order_create.html:54
+msgid "Order Detail"
+msgstr "جزئیات سفارش"
+
+#: .\templates\orders\order_create.html:104
+#| msgid "Order"
+msgid "Your Order"
+msgstr "سفارش شما"
+
+#: .\templates\orders\order_create.html:111
+msgid "Final price"
+msgstr "قیمت نهایی"
+
+#: .\templates\orders\order_create.html:120
+#: .\templates\orders\order_create.html:127
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\orders\order_create.html:126
+msgid "Total"
+msgstr "جمع کل"
+
+#: .\templates\orders\order_create.html:133
+msgid "Payment method"
+msgstr "روش پرداخت"
