@@ -4,6 +4,8 @@ import json
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.conf import settings
 from django.http import HttpResponse
+from django.contrib import messages
+from django.utils.translation import gettext as _
 
 from orders.models import Order
 
@@ -82,15 +84,21 @@ def payment_callback(request):
                 order.ref_id = data['ref_id']
                 order.zarinpal_data = data
                 order.save()
-
-                return HttpResponse('پرداخت شما با موفقیت انجام شد.')
+                messages.success(request, _('Your payment was successfully registered.'))
+                return redirect(reverse('product_list'))
             
             elif payment_code == 101:
-                return HttpResponse('پرداخت شما با موفقیت انجام شد. البته این تراکنش قبلا ثبت شده است.')
-
+                messages.success(request, _('Your payment was successful. However, this transaction has already been recorded.'))
+                return redirect(reverse('product_list'))
+            
             else:
                 error_code = res.json()['errors']['code']
                 error_message = res.json()['errors']['message']
-                return HttpResponse(f'تراکنش ناموفق بود. {error_code} {error_message}')
+                messages.warning(request, _(f'The transaction was unsuccessful. {error_code} {error_message}'))
+                return redirect(reverse('product_list'))
+        else:
+            messages.warning(request, _('The transaction was unsuccessful.'))
+            return redirect(reverse('product_list'))
     else:
-        return HttpResponse('تراکنش ناموفق بود.')
+        messages.warning(request, _('The transaction was unsuccessful.'))
+        return redirect(reverse('product_list')) 
