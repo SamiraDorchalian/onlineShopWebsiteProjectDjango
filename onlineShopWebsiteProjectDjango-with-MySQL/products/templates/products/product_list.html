@@ -5,7 +5,7 @@
 {% block content %}
     <h1>Product List</h1>
     {% for product in products %}
-        <h1>{{ product.title }}</h1>
+        <a href='{{ product.get_absolute_url }}'><h1>{{ product.title }}</h1></a>
         <h2>{{ product.description }}</h2>
     {% endfor %}
 {% endblock content %}
