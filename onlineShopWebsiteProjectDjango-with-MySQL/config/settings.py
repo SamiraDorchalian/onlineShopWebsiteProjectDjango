@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap4",
     'allauth',
     'allauth.account',
+    'rosetta',
 
     # Optional -- requires install using `django-allauth[socialaccount]`.
     'allauth.socialaccount',
