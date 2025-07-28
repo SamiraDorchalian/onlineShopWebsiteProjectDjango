@@ -13,6 +13,8 @@ import os
 
 from pathlib import Path
 from environs import Env
+from django.contrib.messages import constants as messages
+
 
 # for environment variables
 env = Env()
@@ -206,3 +208,8 @@ ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 # crispy forms settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# For messages framework
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
