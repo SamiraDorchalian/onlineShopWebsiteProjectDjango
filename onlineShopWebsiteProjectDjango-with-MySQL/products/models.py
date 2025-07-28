@@ -20,12 +20,11 @@ class Product(models.Model):
 
 class Comment(models.Model):
     PRODUCT_STARS = [
-        ('1', '🙄'),
-        ('2', '🤔🤔'),
-        ('3', '😪😪😪'),
-        ('4', '😊😊😊😊'),
-        ('5', '😍😍😍😍😍'),
-        ('6', '🤩🤩🤩🤩🤩🤩'),
+        ('1', '⭐'),
+        ('2', '⭐⭐'),
+        ('3', '⭐⭐⭐'),
+        ('4', '⭐⭐⭐⭐'),
+        ('5', '⭐⭐⭐⭐⭐'),
     ]
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments', )
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments',)
@@ -37,3 +36,6 @@ class Comment(models.Model):
 
     active = models.BooleanField(default=True)
 
+    def get_absolute_url(self):
+        return reverse("product_detail", args=[self.product.id])
+    
