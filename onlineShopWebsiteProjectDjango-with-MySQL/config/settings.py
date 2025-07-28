@@ -91,6 +91,9 @@ TEMPLATES = [
         },
     },
 ]
+LOCALE_PATHS = (
+    'templates/locale',
+)
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -142,12 +145,25 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa'
+# LANGUAGE_CODE = 'ko-KR'
 
-TIME_ZONE = 'UTC'
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+    ('ko', 'Korean'),
+)
 
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
+# TIME_ZONE = 'Asia/Seoul'
+
+# use Internationalization
 USE_I18N = True
-
+# localization
+USE_L10N = True
+# use TIME_ZONE
 USE_TZ = True
 
 
