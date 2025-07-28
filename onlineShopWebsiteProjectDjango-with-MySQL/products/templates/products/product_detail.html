@@ -10,13 +10,13 @@
 
 {% block content %}
     <!-- Preloader Start -->
-    {% comment %} <div class="ShoppingYar-preloader active">
+    <div class="ShoppingYar-preloader active">
         <div class="ShoppingYar-preloader-inner h-100 d-flex align-items-center justify-content-center">
             <div class="ShoppingYar-child ShoppingYar-bounce1"></div>
             <div class="ShoppingYar-child ShoppingYar-bounce2"></div>
             <div class="ShoppingYar-child zuka-bounce3"></div>
         </div>
-    </div> {% endcomment %}
+    </div>
     <!-- Preloader End -->
 
     <!-- Breadcrumb area Start -->
@@ -156,19 +156,26 @@
                                                 <div class="row">
                                                     <div class="border-top py-5 w-100"></div>
                                                     <div class="col-lg-8 m-auto">
-                                                        <span class="reply-title pull-right">نظر خود را بنویسید</span>
+                                                        <span class="reply-title pull-right">{% trans "Write your comment" %}</span>
                                                         <br>
-                                                        <form action='{% url "comment_create" product.id %}' method='POST'>
-                                                            {% csrf_token %}
-                                                            {{comment_form|crispy}}
-                                                            <div class="form__group">
-                                                                <div class="form-row">
-                                                                    <div class="col-12">
-                                                                        <input type="submit" value="send" class="btn-submit">
+                                                        {% if user.is_authenticated %}
+                                                            <form action='{% url "comment_create" product.id %}' method='POST'>
+                                                                {% csrf_token %}
+                                                                {{comment_form|crispy}}
+                                                                <div class="form__group">
+                                                                    <div class="form-row">
+                                                                        <div class="col-12">
+                                                                            <input type="submit" value="send" class="btn-submit">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </form>
+                                                            </form>
+                                                        {% else %}
+                                                            <p>
+                                                                {% trans "To write your comment please" %}
+                                                                <a href='{% url "account_login" %}'>{% trans "Login" %}</a>
+                                                            </p>
+                                                        {% endif %}
                                                         {% comment %} <form action="#" class="form text-right">
                                                             <div class="form-notes mb--20">
                                                                 <p class="my-3"><span class="required">*</span>ایمیل شما برای دیگران نشان داده نمیشود.</p>
