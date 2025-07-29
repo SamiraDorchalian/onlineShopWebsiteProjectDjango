@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rosetta',
+    'jalali_date',
 
     # Optional -- requires install using `django-allauth[socialaccount]`.
     'allauth.socialaccount',
