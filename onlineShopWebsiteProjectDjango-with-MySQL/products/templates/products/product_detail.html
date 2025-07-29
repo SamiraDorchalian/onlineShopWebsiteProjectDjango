@@ -9,28 +9,13 @@
 {% block page_title %}{% trans "Product Detail" %}{% endblock page_title %}
 
 {% block content %}
-    <!-- Preloader Start -->
-    <div class="ShoppingYar-preloader active">
-        <div class="ShoppingYar-preloader-inner h-100 d-flex align-items-center justify-content-center">
-            <div class="ShoppingYar-child ShoppingYar-bounce1"></div>
-            <div class="ShoppingYar-child ShoppingYar-bounce2"></div>
-            <div class="ShoppingYar-child zuka-bounce3"></div>
-        </div>
-    </div>
-    <!-- Preloader End -->
+        
+        <!-- Preloader Start -->
+            {% include "preloader.html" %}
+        <!-- Preloader End -->
 
-    <!-- Breadcrumb area Start -->
-        <div class="breadcrumb-area bg-color ptb--90" data-bg-color="#f6f6f6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="d-flex justify-content-between align-items-center flex-sm-row flex-column">
-                            <h1 class="page-title"> {% trans "Product Detail" %} «{{ product.title }}»</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Breadcrumb area Start -->
+            {% include "breadcrumb.html" with header_name=product.title %}
         <!-- Breadcrumb area End -->
 
         <!-- Main Content Wrapper Start -->
@@ -228,46 +213,7 @@
         <!-- Search form Popup End -->
 
         <!-- Mini Cart Start -->
-        <aside class="mini-cart" id="miniCart">
-            <div class="mini-cart-wrapper">
-                <a href="" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
-                <div class="mini-cart-inner">
-                    <h3 class="mini-cart__heading mb--40 mb-lg--30 text-right">{% trans "Cart" %}</h3>
-                    <div class="mini-cart__content">
-                        <ul class="mini-cart__list text-right">
-                            {% for item in cart %}
-                                <li class="mini-cart__product d-flex justify-content-between">
-                                    <div class="mini-cart__product__image">
-                                        <a href="#">
-                                            <img src="assets/img/products/prod-1-100x100.jpg" alt="products">
-                                        </a>
-                                    </div>
-                                    <div class="mini-cart__product__content pt-2">
-                                        <span class="mini-cart__product__title d-flex flex-row justify-content-between">
-                                            <a href="#">{{ item.product_obj.title }}</a>
-                                            <a href="#" class="">
-                                                &#10060;
-                                            </a>
-                                        </span>
-                                        <span class="mini-cart__product__quantity">
-                                            <span>{{ item.product_obj.price }} {% trans "$" %}</span> &#215; <span>{{ item.quantity }}</span>
-                                        </span>
-                                    </div>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                        <div class="mini-cart__total">
-                            <span>{% trans "Total" %}</span>
-                            <span class="ammount">{{ cart.get_total_price }} {% trans "$" %}</span>
-                        </div>
-                        <div class="mini-cart__buttons">
-                            <a href="{% url "cart:cart_detail" %}" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans "Go to cart" %}</a>
-                            <a href="checkout.html" class="btn btn-fullwidth btn-bg-sand">{% trans "Checkout" %}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
+            {% include "cart/cart_sidebar.html" %}
         <!-- Mini Cart End -->
 
         <!-- Global Overlay Start -->
