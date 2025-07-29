@@ -8,6 +8,7 @@ class Product(models.Model):
     description = models.TextField(verbose_name=_('Description'))
     price = models.PositiveIntegerField(default=0, verbose_name=_('Price'))
     active = models.BooleanField(default=True, verbose_name=_('Active'))
+    image = models.ImageField(verbose_name=_('Product Image'), upload_to='product/product_cover/', blank=True, )
 
     datetime_create = models.DateTimeField(auto_now_add=True, verbose_name=_('DateTimeCreate'))
     datetime_modified = models.DateTimeField(auto_now=True, verbose_name=_('DateTimeModified'))
@@ -36,6 +37,8 @@ class Comment(models.Model):
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments', verbose_name=_('Author'), )
     body = models.TextField(verbose_name=_('Body'), )
     stars = models.CharField(max_length=10, choices=PRODUCT_STARS, verbose_name=_('Stars'), )
+    image = models.ImageField(verbose_name=_('Author Image'), upload_to='author/author_cover/', blank=True, )
+
 
     datetime_create = models.DateTimeField(auto_now_add=True, verbose_name=_('DateTimeCreate'), )
     datetime_modified = models.DateTimeField(auto_now=True, verbose_name=_('DateTimeModified'), )
