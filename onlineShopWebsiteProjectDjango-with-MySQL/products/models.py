@@ -41,7 +41,7 @@ class Comment(models.Model):
     image = models.ImageField(verbose_name=_('Author Image'), upload_to='author/author_cover/', blank=True, )
 
 
-    datetime_create = models.DateTimeField(default=timezone.now, verbose_name=_('DateTimeCreate'), )
+    datetime_create = models.DateTimeField(auto_now_add=True, verbose_name=_('DateTimeCreate'), )
     datetime_modified = models.DateTimeField(auto_now=True, verbose_name=_('DateTimeModified'), )
 
     active = models.BooleanField(default=True, verbose_name=_('Active'), )
