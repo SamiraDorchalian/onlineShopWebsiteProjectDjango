@@ -23,10 +23,10 @@ class Order(models.Model):
         return f'Order {self.id}'
 
 class OrderItem(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='order_items')
-    quantity = models.PositiveIntegerField(default=1)
-    price = models.PositiveIntegerField()
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items', verbose_name=_('Order'))
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='order_items', verbose_name=_('Product'))
+    quantity = models.PositiveIntegerField(default=1, verbose_name=_('Quantity'))
+    price = models.PositiveIntegerField(verbose_name=_('Price'))
 
     def __str__(self):
         return f'OrderItem {self.id}: {self.product} x {self.quantity} (price:{self.price})'
