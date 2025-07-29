@@ -12,7 +12,7 @@ class ProductCommentsInLine(admin.TabularInline):
 
 @admin.register(Product)
 class ProductAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
-    list_display = ['title', 'description', 'price', 'active', 'datetime_create', 'datetime_modified']
+    list_display = ['title', 'price', 'active', 'datetime_create', 'datetime_modified']
 
     inlines = [
         ProductCommentsInLine,

@@ -14,6 +14,8 @@ class Order(models.Model):
     phone_number = models.CharField(max_length=15, verbose_name=_('Phone Number'))
     address = models.CharField(max_length=700, verbose_name=_('Address'))
 
+    order_notes = models.CharField(max_length=700, blank=True)
+
     datetime_create = models.DateTimeField(auto_now_add=True, verbose_name=_('DateTimeCreate'))
     datetime_modified = models.DateTimeField(auto_now=True, verbose_name=_('DateTimeModified'))
 
