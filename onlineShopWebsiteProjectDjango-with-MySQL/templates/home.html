@@ -1,11 +1,12 @@
 {% extends "_base.html" %}
+{% load i18n %}
 
-{% block page_title %}Home Page{% endblock page_title %}
+{% block page_title %}{% trans "Home Page" %}{% endblock page_title %}
 
 {% block content %}
   <!-- Preloader Start -->
       {% include "preloader.html" %}
   <!-- Preloader End -->
 
-  <h1>Home Page</h1>
+  <h1>{% trans "Home Page" %}</h1>
 {% endblock content %}

@@ -2,6 +2,7 @@
 
 {% load static %}
 {% load i18n %}
+{% load humanize %}
 
 {% load crispy_forms_tags %}
 {% load jalali_tags %}
@@ -35,11 +36,11 @@
                         <div class="col-12 col-sm-8 product-main-details mt-md--50">
                             <div class="product-summary pl-lg--30 pl-md--0 text-right p-4">
                                 <h3 class="product-title mb--20">{{ product.title }}</h3>
-                                <p class="product-short-description mb--20">{{ product.description }}</p>
+                                <p class="product-short-description mb--20">{{ product.description|safe|truncatewords:20|linebreaks }}</p>
                                 <div class="my-5 py-5 product-price-wrapper mb--25">
-                                    <span class="money text-success">{{ product.price|translate_number }} {% trans "$" %}</span>
+                                    <span class="money text-success">{{ product.price|intcomma:False|translate_number }} {% trans "$" %}</span>
                                     <span class="price-separator">-</span>
-                                    <span class="money old-price text-danger">{{ product.price|translate_number }} {% trans "$" %}</span>
+                                    <span class="money old-price text-danger">{{ product.price|intcomma:False|translate_number }} {% trans "$" %}</span>
                                 </div>
                                 <div class="product-action d-flex align-items-sm-center align-content-center mb--30">
                                     <form action='{% url "cart:cart_add" product.id %}' method='POST'>
@@ -84,7 +85,7 @@
                                 <div class="tab-content product-data-tab__content" id="product-tabContent">
                                     <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
                                         <div class="product-description text-justify">
-                                            <p>{{ product.description }}</p>
+                                            <p>{{ product.description|safe|linebreaks }}</p>
                                         </div>
                                     </div>
                                     <div class="tab-pane text-right" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
@@ -134,7 +135,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <p class="review__description text-right px-4 pt-2">
-                                                                            {{ comment.body }}
+                                                                            {{ comment.body|linebreaks }}
                                                                         </p>
                                                                     </div>
                                                                 </div>
