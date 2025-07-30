@@ -16,6 +16,10 @@ class Order(models.Model):
 
     order_notes = models.CharField(max_length=700, blank=True)
 
+    zarinpal_authority = models.CharField(max_length=255, blank=True)
+    zarinpal_ref_id = models.CharField(max_length=150, blank=True)
+    zarinpal_data = models.TextField(blank=True)
+
     datetime_create = models.DateTimeField(auto_now_add=True, verbose_name=_('DateTimeCreate'))
     datetime_modified = models.DateTimeField(auto_now=True, verbose_name=_('DateTimeModified'))
 
