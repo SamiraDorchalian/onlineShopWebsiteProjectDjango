@@ -49,11 +49,7 @@
                                                                     <a href="{% url "cart:cart_remove" item.product_obj.id %}"><i class="flaticon flaticon-cross"></i></a>
                                                                 </td>
                                                                 <td class="product-thumbnail text-left">
-                                                                    {% if product.image %}
-                                                                        <img class="m-auto" style="max-height: 400px;" src="{{ product.image.url }}" alt="productImage">
-                                                                    {% else %}
-                                                                        <img class="m-auto" style="max-height: 400px;" alt="productImage" src="{% static "img/others/comment-1.jpg" %}" />
-                                                                    {% endif %}
+                                                                    <img src="{{ item.product_obj.image.url }}" alt="Product Thumnail">
                                                                 </td>
                                                                 <td class="product-name">
                                                                     <h3>
@@ -95,22 +91,27 @@
                                                 </table>
                                             </div>
                                         {% else %}
-                                            <p>Cart is Empty! Please add some products tho the cart</p>
-                                            <a href='{% url "product_list" %}'>Go Shopping</a>
+                                            <p>{% trans "Cart is Empty! Please add some products tho the cart" %}</p>
+                                            <a href='{% url "product_list" %}'>{% trans "Go Shopping" %}</a>
                                         {% endif %}
                                     </div>
                                 </div>
-                                <div class="row no-gutters border-top pt--20 mt--20">
-                                    <div class="col-sm-6 text-sm-right">
-                                        <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
+                                {% if not cart.is_empty %}
+                                    <div class="row no-gutters border-top pt--20 mt--20">
+                                        <div class="col-sm-6 text-sm-right">
+                                            <form action='{% url "cart:cart_clear" %}' method='POST'>
+                                                {% csrf_token %}
+                                                <button type="submit" class="cart-form__btn">{% trans "Empty cart" %}</button>
+                                            </form>
+                                        </div>
                                     </div>
-                                </div>
+                                {% endif %}
                             {% comment %} </form> {% endcomment %}
                         </div>
                         <div class="col-lg-4">
                             <div class="cart-collaterals">
                                 <div class="cart-totals">
-                                    <h5 class="font-size-14 font-bold mb--15">مجموع</h5>
+                                    <h5 class="font-size-14 font-bold mb--15">{% trans "Total" %}</h5>
                                     <div class="cart-calculator">
                                         {% comment %} <div class="cart-calculator__item">
                                             <div class="cart-calculator__item--head">
@@ -132,8 +133,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="checkout.html" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
-                                    ثبت سفارش
+                                <a href="{% url "order_create" %}" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
+                                    {% trans "Checkout" %}
                                 </a>
                             </div>
                         </div>

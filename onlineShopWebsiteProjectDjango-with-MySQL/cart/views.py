@@ -46,3 +46,14 @@ def remove_from_cart(request, product_id):
 
     return redirect('cart:cart_detail')
 
+@require_POST
+def cart_clear(request):
+    cart = Cart(request)
+
+    if len(cart):
+        cart.clear()
+        messages.success(request, _('All products successfully removed from your cart'))
+    else:
+        messages.warning(request, _('Your cart is already empty'))
+
+    return redirect('product_list')
