@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-29 19:15+0330\n"
-"PO-Revision-Date: 2025-07-29 19:20+0330\n"
-"Last-Translator:   <samiradorchalian1998@gmail.com>\n"
+"POT-Creation-Date: 2025-07-31 15:13+0330\n"
+"PO-Revision-Date: 2025-07-31 14:01+0330\n"
+"Last-Translator: samira درچالیان <samiradorchalian1998@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,54 +18,106 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.2\n"
 
-#: .\models.py:9
+#: .\orders\models.py:9
 msgid "User"
 msgstr "کاربر"
 
-#: .\models.py:10
+#: .\orders\models.py:10
 msgid "Is Paid"
 msgstr "پرداخت شده؟"
 
-#: .\models.py:12
+#: .\orders\models.py:12 .\orders\templates\orders\order_create.html:45
 msgid "First Name"
 msgstr "نام"
 
-#: .\models.py:13
+#: .\orders\models.py:13 .\orders\templates\orders\order_create.html:49
 msgid "Last Name"
 msgstr "نام خانوادگی"
 
-#: .\models.py:14
+#: .\orders\models.py:14 .\orders\templates\orders\order_create.html:61
 msgid "Phone Number"
 msgstr "شماره تلفن"
 
-#: .\models.py:15
+#: .\orders\models.py:15 .\orders\templates\orders\order_create.html:55
 msgid "Address"
 msgstr "آدرس"
 
-#: .\models.py:19
+#: .\orders\models.py:23
 msgid "DateTimeCreate"
 msgstr "تاریخ و زمان ایجاد"
 
-#: .\models.py:20
+#: .\orders\models.py:24
 msgid "DateTimeModified"
 msgstr "تاریخ و زمان اصلاح شده"
 
-#: .\models.py:26 .\templates\orders\order_create.html:21
+#: .\orders\models.py:33 .\orders\templates\orders\order_create.html:21
 msgid "Order"
 msgstr "سفارش"
 
-#: .\models.py:27
+#: .\orders\models.py:34 .\orders\templates\orders\order_create.html:84
 msgid "Product"
 msgstr "محصول"
 
-#: .\models.py:28
+#: .\orders\models.py:35
 msgid "Quantity"
 msgstr "تعداد"
 
-#: .\models.py:29
+#: .\orders\models.py:36
 msgid "Price"
 msgstr "قیمت"
 
-#: .\templates\orders\order_create.html:12
+#: .\orders\templates\orders\order_create.html:12
 msgid "Order Create"
 msgstr "ساخت سفارش"
+
+#: .\orders\templates\orders\order_create.html:33
+msgid "Order Detail"
+msgstr "جزئیات سفارش"
+
+#: .\orders\templates\orders\order_create.html:67
+msgid "Your Notes"
+msgstr "یادداشت شما"
+
+#: .\orders\templates\orders\order_create.html:68
+msgid ""
+"If you have any notes, enter them here. Otherwise, leave this space blank."
+msgstr ""
+"اگر یادداشتی دارید، آن را اینجا وارد کنید. در غیر این صورت، این قسمت را خالی "
+"بگذارید."
+
+#: .\orders\templates\orders\order_create.html:71
+msgid "Send"
+msgstr "ارسال"
+
+#: .\orders\templates\orders\order_create.html:78
+msgid "Your Order"
+msgstr "سفارش شما"
+
+#: .\orders\templates\orders\order_create.html:85
+msgid "Final price"
+msgstr "قیمت نهایی"
+
+#: .\orders\templates\orders\order_create.html:94
+#: .\orders\templates\orders\order_create.html:101
+msgid "$"
+msgstr "تومان"
+
+#: .\orders\templates\orders\order_create.html:100
+msgid "Total"
+msgstr "جمع کل"
+
+#: .\orders\templates\orders\order_create.html:107
+msgid "Payment method"
+msgstr "روش پرداخت"
+
+#: .\orders\templates\orders\order_create.html:112
+msgid "Zarrin Pal online portal"
+msgstr "درگاه آنلاین زرین پال"
+
+#: .\orders\templates\orders\order_create.html:130
+msgid "Start typing and press Enter to search"
+msgstr "شروع به تایپ کنید و برای جستجو Enter را فشار دهید"
+
+#: .\orders\views.py:16
+msgid "You can not proceed to checkout page because your cart is empty."
+msgstr "به دلیل خالی بودن سبد خرید، نمی‌توانید به صفحه پرداخت بروید."

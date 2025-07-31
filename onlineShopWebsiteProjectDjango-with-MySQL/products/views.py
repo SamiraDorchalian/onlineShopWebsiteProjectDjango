@@ -12,6 +12,7 @@ class ProductListView(generic.ListView):
     queryset = Product.objects.filter(active=True)
     template_name = 'products/product_list.html'
     context_object_name = 'products'
+    paginate_by = 8
 
 
 class ProductDetailView(generic.DetailView):

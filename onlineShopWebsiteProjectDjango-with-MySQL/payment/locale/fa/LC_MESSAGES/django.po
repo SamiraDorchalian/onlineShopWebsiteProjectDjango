@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-31 12:53+0330\n"
+"PO-Revision-Date: 2025-07-31 14:15+0330\n"
+"Last-Translator: سمیرا درچالیان <samiradorchalian1998@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.2\n"
+
+#: .\payment\views.py:87
+msgid "Your payment was successfully registered."
+msgstr "پرداخت شما با موفقیت ثبت شد."
+
+#: .\payment\views.py:91
+msgid ""
+"Your payment was successful. However, this transaction has already been "
+"recorded."
+msgstr ""
+"پرداخت شما با موفقیت انجام شد. با این حال، این تراکنش قبلاً ثبت شده است."
+
+#: .\payment\views.py:97
+msgid "The transaction was unsuccessful. {error_code} {error_message}"
+msgstr "تراکنش ناموفق بود. {error_code} {error_message}"
+
+#: .\payment\views.py:100 .\payment\views.py:103
+msgid "The transaction was unsuccessful."
+msgstr "تراکنش ناموفق بود."

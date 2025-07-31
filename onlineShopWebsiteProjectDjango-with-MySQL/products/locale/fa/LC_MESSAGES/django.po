@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-28 13:51+0330\n"
-"PO-Revision-Date: 2025-07-28 14:06+0330\n"
-"Last-Translator:   <samiradorchalian1998@gmail.com>\n"
+"POT-Creation-Date: 2025-07-31 15:13+0330\n"
+"PO-Revision-Date: 2025-07-31 13:20+0330\n"
+"Last-Translator: samira درچالیان <samiradorchalian1998@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,42 +18,247 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.2\n"
 
-#: .\models.py:7
+#: .\products\models.py:9
 msgid "Title"
 msgstr "موضوع"
 
-#: .\models.py:8
+#: .\products\models.py:10
 msgid "Description"
 msgstr "توضیحات"
 
-#: .\models.py:9
+#: .\products\models.py:11
+msgid "Short Description"
+msgstr "توضیح کوتاه"
+
+#: .\products\models.py:12
 msgid "Price"
 msgstr "قیمت"
 
-#: .\models.py:10 .\models.py:43
+#: .\products\models.py:13 .\products\models.py:49
 msgid "Active"
 msgstr "فعال"
 
-#: .\models.py:12 .\models.py:40
+#: .\products\models.py:14
+msgid "Product Image"
+msgstr "عکس محصول"
+
+#: .\products\models.py:16 .\products\models.py:46
 msgid "DateTimeCreate"
 msgstr "تاریخ و زمان ایجاد"
 
-#: .\models.py:13 .\models.py:41
+#: .\products\models.py:17 .\products\models.py:47
 msgid "DateTimeModified"
 msgstr "تاریخ و زمان اصلاح شده"
 
-#: .\models.py:35
+#: .\products\models.py:39
 msgid "Product"
 msgstr "محصول"
 
-#: .\models.py:36
+#: .\products\models.py:40
 msgid "Author"
 msgstr "نویسنده"
 
-#: .\models.py:37
+#: .\products\models.py:41
 msgid "Body"
 msgstr "متن"
 
-#: .\models.py:38
+#: .\products\models.py:42
 msgid "Stars"
 msgstr "امتیاز"
+
+#: .\products\models.py:43
+msgid "Author Image"
+msgstr "عکس نویسنده"
+
+#: .\products\templates\products\product_detail.html:12
+msgid "Product Detail"
+msgstr "جزئیات محصول"
+
+#: .\products\templates\products\product_detail.html:43
+#: .\products\templates\products\product_detail.html:45
+#: .\products\templates\products\product_list.html:67
+#: .\products\templates\products\product_list.html:70
+msgid "$"
+msgstr "تومان"
+
+#: .\products\templates\products\product_detail.html:57
+#: .\products\templates\products\product_list.html:78
+msgid "Add to cart"
+msgstr "اضافه کردن به سبد خرید"
+
+#: .\products\templates\products\product_detail.html:64
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: .\products\templates\products\product_detail.html:65
+msgid "Clothes"
+msgstr "لباس"
+
+#: .\products\templates\products\product_detail.html:66
+msgid "Summer"
+msgstr "تابستان"
+
+#: .\products\templates\products\product_detail.html:67
+msgid "Warm"
+msgstr "گرم"
+
+#: .\products\templates\products\product_detail.html:68
+msgid "Woman"
+msgstr "زنانه"
+
+#: .\products\templates\products\product_detail.html:79
+msgid "Product description"
+msgstr "توضیحات محصول"
+
+#: .\products\templates\products\product_detail.html:82
+msgid "Features"
+msgstr "ویژگی ها"
+
+#: .\products\templates\products\product_detail.html:85
+msgid "Comments"
+msgstr "نظرات"
+
+#: .\products\templates\products\product_detail.html:99
+msgid "Weight"
+msgstr "وزن"
+
+#: .\products\templates\products\product_detail.html:100
+msgid "Kilogram"
+msgstr "کیلوگرم"
+
+#: .\products\templates\products\product_detail.html:103
+msgid "Size"
+msgstr "سایز"
+
+#: .\products\templates\products\product_detail.html:107
+msgid "Color"
+msgstr "رنگ"
+
+#: .\products\templates\products\product_detail.html:109
+#: .\products\templates\products\product_detail.html:300
+msgid "Black"
+msgstr "سیاه"
+
+#: .\products\templates\products\product_detail.html:110
+msgid "Green"
+msgstr "سبز"
+
+#: .\products\templates\products\product_detail.html:111
+#: .\products\templates\products\product_detail.html:295
+msgid "Red"
+msgstr "قرمز"
+
+#: .\products\templates\products\product_detail.html:112
+msgid "Orange"
+msgstr "نارنجی"
+
+#: .\products\templates\products\product_detail.html:121
+msgid "Comment for"
+msgstr "نظر برای "
+
+#: .\products\templates\products\product_detail.html:137
+#: .\products\templates\products\product_detail.html:279
+msgid "Rated"
+msgstr "امتیاز"
+
+#: .\products\templates\products\product_detail.html:137
+#: .\products\templates\products\product_detail.html:279
+msgid "out of 5"
+msgstr "از 5"
+
+#: .\products\templates\products\product_detail.html:154
+msgid "Write your comment"
+msgstr "نظر خود را بنویسید"
+
+#: .\products\templates\products\product_detail.html:170
+msgid "To write your comment please"
+msgstr "لطفا نظر خود را بنویسید"
+
+#: .\products\templates\products\product_detail.html:171
+msgid "Login"
+msgstr "ورود"
+
+#: .\products\templates\products\product_detail.html:217
+msgid "Start typing and press 'Enter' to search"
+msgstr "شروع به تایپ کنید و برای جستجو «Enter» را فشار دهید"
+
+#: .\products\templates\products\product_detail.html:259
+#: .\products\templates\products\product_detail.html:267
+msgid "sale"
+msgstr "فروش"
+
+#: .\products\templates\products\product_detail.html:282
+msgid "Summer clothes"
+msgstr "لباس تابستانی"
+
+#: .\products\templates\products\product_detail.html:283
+msgid ""
+"Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna "
+"molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam "
+"egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum "
+"ut sem laoreet, feugiat tellus at, hendrerit arcu."
+msgstr ""
+
+#: .\products\templates\products\product_detail.html:291
+msgid "Color:"
+msgstr "رنگ:"
+
+#: .\products\templates\products\product_detail.html:305
+msgid "Pink"
+msgstr "صورتی"
+
+#: .\products\templates\products\product_detail.html:310
+msgid "Blue"
+msgstr "آبی"
+
+#: .\products\templates\products\product_detail.html:316
+msgid "Size:"
+msgstr "سایز:"
+
+#: .\products\templates\products\product_detail.html:340
+msgid "Clear"
+msgstr "پاک کردن"
+
+#: .\products\templates\products\product_detail.html:344
+msgid "Quantity:"
+msgstr "تعداد:"
+
+#: .\products\templates\products\product_detail.html:350
+msgid "Add To Cart"
+msgstr "اضافه کردن به سبد خرید"
+
+#: .\products\templates\products\product_detail.html:354
+msgid "Category:"
+msgstr "دسته بندی ها:"
+
+#: .\products\templates\products\product_detail.html:355
+msgid "Full Sweater"
+msgstr "ژاکت کامل"
+
+#: .\products\templates\products\product_detail.html:356
+msgid "SweatShirt"
+msgstr "سویشرت"
+
+#: .\products\templates\products\product_detail.html:357
+msgid "Jacket"
+msgstr "ژاکت"
+
+#: .\products\templates\products\product_detail.html:358
+msgid "Blazer"
+msgstr "بلیزر"
+
+#: .\products\templates\products\product_list.html:7
+msgid "Product List"
+msgstr "لیست محصولات"
+
+#: .\products\templates\products\product_list.html:60
+msgid "Special discount"
+msgstr "تخفیف ویژه"
+
+#: .\products\templates\products\product_list.html:114
+msgid "Enter your phrase in the box below."
+msgstr "عبارت مورد نظر خود را در کادر زیر وارد کنید."
+
+#: .\products\views.py:42
+msgid "Comment successfully created"
+msgstr "نظر با موفقیت ایجاد شد"

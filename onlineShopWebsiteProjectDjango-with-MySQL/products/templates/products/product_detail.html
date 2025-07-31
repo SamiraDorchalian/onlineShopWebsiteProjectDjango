@@ -59,11 +59,11 @@
 
                                 </div>
                                 <div class="product-footer-meta mt-5 pt-5">
-                                    <p><span class="m-0">دسته بندی ها:</span>
-                                        <a href="shop.html">لباس</a>,
-                                        <a href="shop.html">تابستانی</a>,
-                                        <a href="shop.html">گرم</a>,
-                                        <a href="shop.html">زنانه</a>
+                                    <p><span class="m-0">{% trans "Categories" %}</span>
+                                        <a href="shop.html">{% trans "Clothes" %}</a>,
+                                        <a href="shop.html">{% trans "Summer" %}</a>,
+                                        <a href="shop.html">{% trans "Warm" %}</a>,
+                                        <a href="shop.html">{% trans "Woman" %}</a>
                                     </p>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                                         <span>{% trans "Product description" %}</span>
                                     </a>
                                     <a class="m-0 product-data-tab__link nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-selected="true">
-                                        <span>ویژگی ها</span>
+                                        <span>{% trans "Features" %}</span>
                                     </a>
                                     <a class="m-0 product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-selected="true">
                                         <span>{% trans "Comments" %} ({{ product.comments.all|only_active_comments|length|translate_number }})</span>
@@ -94,20 +94,20 @@
                                             <table class="table shop_attributes">
                                                 <tbody>
                                                     <tr>
-                                                        <th>وزن</th>
-                                                        <td>۴۳۰ گرم</td>
+                                                        <th>{% trans "Weight" %}</th>
+                                                        <td>۴۳۰ {% trans "Kilogram" %}</td>
                                                     </tr>
                                                     <tr>
-                                                        <th>سایز</th>
+                                                        <th>{% trans "Size" %}</th>
                                                         <td>XL</td>
                                                     </tr>
                                                     <tr>
-                                                        <th>رنگ</th>
+                                                        <th>{% trans "Color" %}</th>
                                                         <td>
-                                                            <a href="shop-sidebar.html">مشکی</a>,
-                                                            <a href="shop-sidebar.html">سبز</a>,
-                                                            <a href="shop-sidebar.html">قرمز</a>,
-                                                            <a href="shop-sidebar.html">نارنجی</a>,
+                                                            <a href="shop-sidebar.html">{% trans "Black" %}</a>,
+                                                            <a href="shop-sidebar.html">{% trans "Green" %}</a>,
+                                                            <a href="shop-sidebar.html">{% trans "Red" %}</a>,
+                                                            <a href="shop-sidebar.html">{% trans "Orange" %}</a>,
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -132,7 +132,7 @@
                                                                         </div>
                                                                         <div class="product-rating">
                                                                             <div class="m-0 star-rating star-six">
-                                                                                <span>Rated <strong class="rating">{{ product.stars }}</strong> out of 5</span>
+                                                                                <span>{% trans "Rated" %} <strong class="rating">{{ product.stars }}</strong> {% trans "out of 5" %}</span>
                                                                             </div>
                                                                         </div>
                                                                         <p class="review__description text-right px-4 pt-2">
@@ -211,7 +211,7 @@
         <div class="searchform__popup" id="searchForm">
             <a href="#" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
             <div class="searchform__body">
-                <p>Start typing and press Enter to search</p>
+                <p>{% trans "Start typing and press 'Enter' to search" %}</p>
                 <form class="searchform">
                     <input type="text" name="popup-search" id="popup-search" class="searchform__input" placeholder="Search Entire Store...">
                     <button type="submit" class="searchform__submit"><i class="flaticon flaticon-magnifying-glass-icon"></i></button>
@@ -253,7 +253,7 @@
                                         <img src="assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
                                     </a>
                                 </div>
-                                <span class="product-badge sale">sale</span>
+                                <span class="product-badge sale">{% trans "sale" %}</span>
                             </div>
                             <div class="product-image">
                                 <div class="product-image--holder">
@@ -261,7 +261,7 @@
                                         <img src="assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
                                     </a>
                                 </div>
-                                <span class="product-badge sale">sale</span>
+                                <span class="product-badge sale">{% trans "sale" %}</span>
                             </div>
                         </div>
                     </div>
@@ -273,11 +273,11 @@
                             </div>
                             <div class="product-rating d-flex mb--20">
                                 <div class="star-rating star-three">
-                                    <span>Rated <strong class="rating">5.00</strong> out of 5</span>
+                                    <span>{% trans "Rated" %} <strong class="rating">{{ product.stars }}</strong> {% trans "out of 5" %}</span>
                                 </div>
                             </div>
-                            <h3 class="product-title mb--20">لباس تابستانی</h3>
-                            <p class="product-short-description mb--25">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
+                            <h3 class="product-title mb--20">{% trans "Summer clothes" %}</h3>
+                            <p class="product-short-description mb--25">{% trans "Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu." %}</p>
                             <div class="product-price-wrapper mb--25">
                                 <span class="money">$200.00</span>
                                 <span class="price-separator">-</span>
@@ -285,32 +285,32 @@
                             </div>
                             <form action="#" class="variation-form mb--30">
                                 <div class="product-color-variations d-flex align-items-center mb--20">
-                                    <p class="variation-label">Color:</p>
+                                    <p class="variation-label">{% trans "Color:" %}</p>
                                     <div class="product-color-variation variation-wrapper">
                                         <div class="variation">
                                             <a class="product-color-variation-btn red selected" data-toggle="tooltip" data-placement="top" title="Red">
-                                                <span class="product-color-variation-label">Red</span>
+                                                <span class="product-color-variation-label">{% trans "Red" %}</span>
                                             </a>
                                         </div>
                                         <div class="variation">
                                             <a class="product-color-variation-btn black" data-toggle="tooltip" data-placement="top" title="Black">
-                                                <span class="product-color-variation-label">Black</span>
+                                                <span class="product-color-variation-label">{% trans "Black" %}</span>
                                             </a>
                                         </div>
                                         <div class="variation">
                                             <a class="product-color-variation-btn pink" data-toggle="tooltip" data-placement="top" title="Pink">
-                                                <span class="product-color-variation-label">Pink</span>
+                                                <span class="product-color-variation-label">{% trans "Pink" %}</span>
                                             </a>
                                         </div>
                                         <div class="variation">
                                             <a class="product-color-variation-btn blue" data-toggle="tooltip" data-placement="top" title="Blue">
-                                                <span class="product-color-variation-label">Blue</span>
+                                                <span class="product-color-variation-label">{% trans "Blue" %}</span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="product-size-variations d-flex align-items-center mb--15">
-                                    <p class="variation-label">Size:</p>
+                                    <p class="variation-label">{% trans "Size:" %}</p>
                                     <div class="product-size-variation variation-wrapper">
                                         <div class="variation">
                                             <a class="product-size-variation-btn selected" data-toggle="tooltip" data-placement="top" title="S">
@@ -334,25 +334,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="" class="reset_variations">Clear</a>
+                                <a href="" class="reset_variations">{% trans "Clear" %}</a>
                             </form>
                             <div class="product-action d-flex flex-sm-row flex-column align-items-sm-center align-items-start mb--30">
                                 <div class="quantity-wrapper d-flex align-items-center mr--30 mr-xs--0 mb-xs--30">
-                                    <label class="quantity-label" for="quick-qty">Quantity:</label>
+                                    <label class="quantity-label" for="quick-qty">{% trans "Quantity:" %}</label>
                                     <div class="quantity">
                                         <input type="number" class="quantity-input" name="qty" id="quick-qty" value="1" min="1">
                                     </div>
                                 </div>
                                 <button type="button" class="btn btn-small btn-bg-red btn-color-white btn-hover-2" onclick="window.location.href='cart.html'">
-                                    Add To Cart
+                                    {% trans "Add To Cart" %}
                                 </button>
                             </div>
                             <div class="product-footer-meta">
-                                <p><span>Category:</span>
-                                    <a href="shop.html">Full Sweater</a>,
-                                    <a href="shop.html">SweatShirt</a>,
-                                    <a href="shop.html">Jacket</a>,
-                                    <a href="shop.html">Blazer</a>
+                                <p><span>{% trans "Category:" %}</span>
+                                    <a href="shop.html">{% trans "Full Sweater" %}</a>,
+                                    <a href="shop.html">{% trans "SweatShirt" %}</a>,
+                                    <a href="shop.html">{% trans "Jacket" %}</a>,
+                                    <a href="shop.html">{% trans "Blazer" %}</a>
                                 </p>
                             </div>
                         </div>

@@ -35,11 +35,11 @@
                                                     <thead>
                                                         <tr>
                                                             <th>&nbsp;</th>
-                                                            <th>عکس محصول</th>
-                                                            <th>نام محصول</th>
-                                                            <th>قیمت</th>
-                                                            <th>مقدار</th>
-                                                            <th>مجموع</th>
+                                                            <th>{% trans "Product Image" %}</th>
+                                                            <th>{% trans "Product Name" %}</th>
+                                                            <th>{% trans "price" %}</th>
+                                                            <th>{% trans "Quantity" %}</th>
+                                                            <th>{% trans "Total" %}</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -72,7 +72,7 @@
                                                                                 class="quantity-input" 
                                                                                 name="quantity" 
                                                                                 id="qty-1" 
-                                                                                value="{{ item.quantity|intcomma:False|translate_number }}" 
+                                                                                value="{{ item.quantity }}" 
                                                                                 min="1"
                                                                             >
                                                                         </div>
@@ -123,7 +123,7 @@
                                         </div> {% endcomment %}
                                         <div class="cart-calculator__item order-total">
                                             <div class="cart-calculator__item--head">
-                                                <span>جمع کل</span>
+                                                <span>{% trans "Total" %}</span>
                                             </div>
                                             <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
@@ -148,7 +148,7 @@
         <div class="searchform__popup" id="searchForm">
             <a href="#" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
             <div class="searchform__body">
-                <p>Start typing and press Enter to search</p>
+                <p>{% trans "Start typing and press Enter to search" %}</p>
                 <form class="searchform">
                     <input type="text" name="popup-search" id="popup-search" class="searchform__input" placeholder="Search Entire Store...">
                     <button type="submit" class="searchform__submit"><i class="flaticon flaticon-magnifying-glass-icon"></i></button>
